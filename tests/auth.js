@@ -6,7 +6,8 @@ const random_word = require("./services/random_words")
 const name = random_word(10)
 const password = random_word(10)
 const email = random_word(10)+"@gmail.com"
-const send_object = require("./config_files/config")
+const send_object = {username:name, password:password, email:email}
+// const send_object = require("./config_files/config")
 let access_token = ""
 describe("/api/auth/signup", async () => {
   it('user should be able to sign up himself.',  (done) => {
@@ -20,7 +21,6 @@ describe("/api/auth/signup", async () => {
         res.body.should.be.a('object');
         done();
     })
-    
   });
 });
 describe("/api/auth/signin", async () => {
