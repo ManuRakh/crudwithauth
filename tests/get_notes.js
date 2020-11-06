@@ -3,7 +3,6 @@ let chaiHttp = require('chai-http');
 chai.use(chaiHttp);
 var should = chai.should();
 
-const random_word = require("./services/random_words")
 require('dotenv').config();
 const config = require("./config_files/config")
 const send_object = config

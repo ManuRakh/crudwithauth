@@ -4,7 +4,6 @@ chai.use(chaiHttp);
 var should = chai.should();
 require('dotenv').config();
 const search_note = 2
-let access_token = ""
 describe("GET SINGLE NOTE /api/user/notes/:id", async () => {
     it("user should be able get single note without authorization", (done)=>{
             chai.request(server)

@@ -5,7 +5,7 @@ const config = require("../app/config/auth.config.js");
 const app = new MicroMQ({
   name: 'users',
   rabbit: {
-    url: "amqp://guest:guest@localhost:5672",
+    url: "amqp://guest:guest@localhost:5672",//путь для докер image с запущенным rabbitmq
   },
 });
 
@@ -27,6 +27,7 @@ app.get('/status',async (req, res) => {
 });
 
 app.start();
+console.log("STARTED MICROSERVICE!")
 async function decode_jwt(token){//функция для распарсивания JWT токена и вытаскивания оттуда user id
     let user_info = null
     await new Promise((res)=>{
