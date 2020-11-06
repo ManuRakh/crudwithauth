@@ -14,7 +14,7 @@
     "express",
     "mysql"
   ],
-  "author": "bezkoder",
+  "author": "ManuRakh",
   "license": "ISC",
   "dependencies": {
     "assert": "^2.0.0",
