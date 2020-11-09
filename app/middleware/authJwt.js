@@ -1,8 +1,8 @@
+/* eslint-disable consistent-return */
 const jwt = require('jsonwebtoken');
 const config = require('../config/auth.config.js');
-const db = require('../models');
 
-verifyToken = (req, res, next) => {
+const verifyToken = (req, res, next) => {
   const token = req.headers['x-access-token'];
 
   if (!token) {

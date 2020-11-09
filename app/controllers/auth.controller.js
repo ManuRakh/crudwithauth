@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 /* eslint-disable import/order */
 const db = require('../models');
 const config = require('../config/auth.config');
@@ -72,6 +73,6 @@ exports.signin = (req, res) => {
       res.status(500).send({ message: err.message });
     });
 };
-exports.logout = (req, res) => {
+exports.logout = () => {
 
 };

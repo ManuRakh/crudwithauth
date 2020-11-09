@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable func-names */
 const { authJwt } = require('../middleware');
 const notesController = require('../controllers/notes.controller');
 

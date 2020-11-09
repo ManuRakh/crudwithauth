@@ -1,9 +1,8 @@
 const db = require('../models');
 
-const { ROLES } = db;
 const User = db.user;
 
-checkDuplicateUsernameOrEmail = (req, res, next) => {
+const checkDuplicateUsernameOrEmail = (req, res, next) => {
   // Username
   User.findOne({
     where: {
@@ -22,6 +21,7 @@ checkDuplicateUsernameOrEmail = (req, res, next) => {
       where: {
         email: req.body.email,
       },
+    // eslint-disable-next-line no-shadow
     }).then((user) => {
       if (user) {
         res.status(400).send({
